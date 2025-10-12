@@ -1,0 +1,339 @@
+profile:
+  name: "Yun Qu"
+  title: "Ph.D. candidate"
+  institution: "Tsinghua University"
+  department: "Department of Automation"
+  advisor: "Prof. Xiangyang Ji"
+  advisor_url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
+  institution_url: "https://www.tsinghua.edu.cn/"
+  email: "qy22@mails.tsinghua.edu.cn"
+  scholar: "https://scholar.google.com/citations?user=l9Ky9goAAAAJ"
+  twitter: "https://x.com/quyun52425662"
+  github: "https://github.com/cloud-qu"
+  photo: "qyimages/YunQu.jpg"
+  bio: |
+    My research focuses on <strong>Reinforcement Learning</strong> and <strong>Large Language Models</strong>.
+    I work with the <a href="https://www.thuidm.com/">THU-IDM</a> team, where we develop efficient algorithms for decision-making.
+    Prior to my doctoral studies, I received my B.Eng. degree from the Department of Automation at Tsinghua University.
+
+research:
+  interests: "I'm interested in <strong>Reinforcement Learning</strong> and <strong>Large Language Models</strong>. My research focuses on efficient and intelligent decision-making with minimal environment interactions."
+
+publications:
+  - title: "Can Prompt Difficulty be Online Predicted for Accelerating RL Finetuning of Reasoning Models?"
+    authors:
+      - name: "Yun Qu"
+        is_me: true
+      - name: "Qi (Cheems) Wang"
+        url: "https://sites.google.com/view/albert-q-wang-at-ai-community/home"
+      - name: "Yixiu Mao"
+        url: "https://scholar.google.com/citations?user=gNcb5LUAAAAJ"
+      - name: "Vincent Tao Hu"
+        url: "https://taohu.me/"
+      - name: "Björn Ommer"
+        url: "https://scholar.google.de/citations?user=zWbvIUcAAAAJ"
+      - name: "Xiangyang Ji"
+        url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
+    venue: "arxiv"
+    year: 2025
+    highlight: true  # 是否高亮显示
+    oral: false       # 是否口头报告
+    award: ""  # 可选的奖项
+    links:
+      paper: "https://arxiv.org/abs/2507.04632"
+      code: "https://github.com/thu-rllab/MoPPS"
+    image: "qyimages/mopps.png"  # 静态图片
+    description: "This work introduces Model Predictive Prompt Selection, a Bayesian risk-predictive framework that online estimates prompt difficulty without requiring costly LLM interactions."
+  - title: "Fast and Robust: Task Sampling with Posterior and Diversity Synergies for Adaptive Decision-Makers in Randomized Environments"
+    authors:
+      - name: "Yun Qu*"
+        is_me: true
+      - name: "Qi (Cheems) Wang*"
+        url: "https://sites.google.com/view/albert-q-wang-at-ai-community/home"
+      - name: "Yixiu Mao*"
+        url: "https://scholar.google.com/citations?user=gNcb5LUAAAAJ"
+      - name: "Yiqin Lv"
+        url: ""
+      - name: "Xiangyang Ji"
+        url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
+    venue: "ICML"
+    year: 2025
+    highlight: true  # 是否高亮显示
+    oral: false       # 是否口头报告
+    award: ""  # 可选的奖项
+    links:
+      paper: "https://arxiv.org/abs/2504.19139"
+      code: "https://github.com/thu-rllab/PDTS"
+    image: "qyimages/PDTS.png"  # 静态图片
+    description: "We propose an easy-to-implement method, referred to as Posterior and Diversity Synergized Task Sampling (PDTS), to accommodate fast and robust sequential decision-making."
+  - title: "Model Predictive Task Sampling for Efficient and Robust Adaptation"
+    authors:
+      - name: "Qi (Cheems) Wang*"
+        url: "https://sites.google.com/view/albert-q-wang-at-ai-community/home"
+      - name: "Zehao Xiao*"
+        url: "https://zzzx1224.github.io/"
+      - name: "Yixiu Mao*"
+        url: "https://scholar.google.com/citations?user=gNcb5LUAAAAJ"
+      - name: "Yun Qu*"
+        is_me: true
+      - name: "Jiayi Shen"
+        url: "https://autumn9999.github.io/"
+      - name: "Yiqin Lv"
+        url: ""
+      - name: "Xiangyang Ji"
+        url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
+    venue: "arxiv"
+    year: 2025
+    highlight: true  # 是否高亮显示
+    oral: false       # 是否口头报告
+    award: ""  # 可选的奖项
+    links:
+      paper: "https://autumn9999.github.io/"
+      code: "https://github.com/thu-rllab/MPTS"
+    image: "qyimages/MPTS.png"  # 静态图片
+    description: "We introduce Model Predictive Task Sampling (MPTS), a framework that bridges the task space and adaptation risk landscape, providing a theoretical foundation for robust active task sampling."
+  - title: "Latent Reward: LLM-Empowered Credit Assignment in Episodic Reinforcement Learning"
+    authors:
+      - name: "Yun Qu*"
+        is_me: true
+      - name: "Yuhang Jiang*"
+        url: "https://scholar.google.com/citations?user=hBuJU48AAAAJ"
+      - name: "Boyuan Wang"
+        url: "https://scholar.google.com/citations?user=BQyuCvwAAAAJ"
+      - name: "Yixiu Mao"
+        url: "https://scholar.google.com/citations?user=gNcb5LUAAAAJ"
+      - name: "Qi (Cheems) Wang*"
+        url: "https://sites.google.com/view/albert-q-wang-at-ai-community/home"
+      - name: "Chang Liu"
+        url: ""
+      - name: "Xiangyang Ji"
+        url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
+    venue: "AAAI"
+    year: 2025
+    highlight: true  # 是否高亮显示
+    oral: false       # 是否口头报告
+    award: ""  # 可选的奖项
+    links:
+      paper: "https://arxiv.org/abs/2412.11120"
+      code: "https://github.com/thu-rllab/LaRe"
+    image: "qyimages/LaRe.png"  # 静态图片
+    description: "We introduce LaRe, a novel LLM-empowered symbolic-based decision-making framework, to improve credit assignment in episodic reinforcement learning."
+  - title: "Doubly Mild Generalization for Offline Reinforcement Learning"
+    authors:
+      - name: "Yixiu Mao"
+        url: "https://scholar.google.com/citations?user=gNcb5LUAAAAJ"
+      - name: "Qi (Cheems) Wang"
+        url: "https://sites.google.com/view/albert-q-wang-at-ai-community/home"
+      - name: "Yun Qu"
+        is_me: true
+      - name: "Yuhang Jiang"
+        url: "https://scholar.google.com/citations?user=hBuJU48AAAAJ"
+      - name: "Xiangyang Ji"
+        url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
+    venue: "NeurIPS"
+    year: 2024
+    highlight: false  # 是否高亮显示
+    oral: false       # 是否口头报告
+    award: ""  # 可选的奖项
+    links:
+      paper: "https://arxiv.org/abs/2411.07934"
+      code: "https://github.com/maoyixiu/DMG"
+    image: ""  # 静态图片
+    description: "To appropriately exploit generalization in offline RL, we propose Doubly Mild Generalization (DMG), comprising (i) mild action generalization and (ii) mild generalization propagation."
+  - title: "Offline reinforcement learning with ood state correction and ood action suppression"
+    authors:
+      - name: "Yixiu Mao"
+        url: "https://scholar.google.com/citations?user=gNcb5LUAAAAJ"
+      - name: "Qi (Cheems) Wang"
+        url: "https://sites.google.com/view/albert-q-wang-at-ai-community/home"
+      - name: "Chen Chen"
+        url: ""
+      - name: "Yun Qu"
+        is_me: true
+      - name: "Xiangyang Ji"
+        url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
+    venue: "NeurIPS"
+    year: 2024
+    highlight: false  # 是否高亮显示
+    oral: false       # 是否口头报告
+    award: ""  # 可选的奖项
+    links:
+      paper: "https://arxiv.org/abs/2410.19400"
+      code: "https://github.com/maoyixiu/SCAS"
+    image: "qyimages/SCAS.png"  # 静态图片
+    description: "We propose SCAS, a simple yet effective approach that unifies OOD state correction and OOD action suppression in offline RL."
+  - title: "Choices are More Important than Efforts: LLM Enables Efficient Multi-Agent Exploration"
+    authors:
+      - name: "Yun Qu"
+        is_me: true
+      - name: "Boyuan Wang"
+        url: "https://scholar.google.com/citations?user=BQyuCvwAAAAJ"
+      - name: "Yuhang Jiang"
+        url: "https://scholar.google.com/citations?user=hBuJU48AAAAJ"
+      - name: "Jianzhun Shao"
+        url: "https://scholar.google.com/citations?user=uCLTRH8AAAAJ"
+      - name: "Yixiu Mao"
+        url: "https://scholar.google.com/citations?user=gNcb5LUAAAAJ"
+      - name: "Qi (Cheems) Wang*"
+        url: "https://sites.google.com/view/albert-q-wang-at-ai-community/home"
+      - name: "Chang Liu"
+        url: ""
+      - name: "Xiangyang Ji"
+        url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
+    venue: "arxiv"
+    year: 2024
+    highlight: false  # 是否高亮显示
+    oral: false       # 是否口头报告
+    award: ""  # 可选的奖项
+    links:
+      paper: "https://arxiv.org/abs/2410.02511"
+      code: ""
+    image: "qyimages/LEMAE.png"  # 静态图片
+    description: "This paper introduces a systematic approach, termed LEMAE, choosing to channel informative task-relevant guidance from a knowledgeable Large Language Model (LLM) for Efficient Multi-Agent Exploration."
+  - title: "Robust Fast Adaptation from Adversarially Explicit Task Distribution Generation"
+    authors:
+      - name: "Qi (Cheems) Wang*"
+        url: "https://sites.google.com/view/albert-q-wang-at-ai-community/home"
+      - name: "Yiqin Lv*"
+        url: ""
+      - name: "Yixiu Mao*"
+        url: "https://scholar.google.com/citations?user=gNcb5LUAAAAJ"
+      - name: "Yun Qu"
+        is_me: true
+      - name: "Yi Xu"
+        url: "https://yxu71.github.io/"
+      - name: "Xiangyang Ji"
+        url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
+    venue: "KDD"
+    year: 2025
+    highlight: false  # 是否高亮显示
+    oral: false       # 是否口头报告
+    award: ""  # 可选的奖项
+    links:
+      paper: "https://dl.acm.org/doi/abs/10.1145/3690624.3709337"
+      project: "https://sites.google.com/view/ar-metalearn"
+      code: "https://github.com/lvyiqin/AR-MAML"
+    image: "qyimages/ARMAML.png"  # 静态图片
+    description: "We consider explicitly generative modeling task distributions placed over task identifiers and propose robustifying fast adaptation from adversarial training."
+  - title: "LLM-Empowered State Representation for Reinforcement Learning"
+    authors:
+      - name: "Boyuan Wang*"
+        url: "https://scholar.google.com/citations?user=BQyuCvwAAAAJ"
+      - name: "Yun Qu*"
+        is_me: true
+      - name: "Yuhang Jiang"
+        url: "https://scholar.google.com/citations?user=hBuJU48AAAAJ"
+      - name: "Chang Liu"
+        url: ""
+      - name: "Wenming Yang"
+        url: ""
+      - name: "Xiangyang Ji"
+        url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
+    venue: "ICML"
+    year: 2024
+    highlight: true  # 是否高亮显示
+    oral: false       # 是否口头报告
+    award: ""  # 可选的奖项
+    links:
+      paper: "https://arxiv.org/abs/2407.13237"
+      code: "https://github.com/thu-rllab/LESR"
+    image: "qyimages/LESR.png"  # 静态图片
+    description: "We propose LLM-Empowered State Representation (LESR), a novel approach that utilizes LLM to autonomously generate task-related state representation codes which help to enhance the continuity of network mappings and facilitate efficient training."
+  - title: "Hokoff: Real Game Dataset from Honor of Kings and its Offline Reinforcement Learning Benchmarks"
+    authors:
+      - name: "Yun Qu*"
+        is_me: true
+      - name: "Boyuan Wang*"
+        url: "https://scholar.google.com/citations?user=BQyuCvwAAAAJ"
+      - name: "Jianzhun Shao*"
+        url: "https://scholar.google.com/citations?user=uCLTRH8AAAAJ"
+      - name: "Yuhang Jiang"
+        url: "https://scholar.google.com/citations?user=hBuJU48AAAAJ"
+      - name: "Chen Chen"
+        url: ""
+      - name: "Zhenbin Ye"
+        url: ""
+      - name: "Linc Liu"
+        url: ""
+      - name: "Yang Feng"
+        url: ""
+      - name: "Lin Lai"
+        url: ""
+      - name: "Hongyang Qin"
+        url: ""
+      - name: "Minwen Deng"
+        url: ""
+      - name: "Juchao Zhuo"
+        url: ""
+      - name: "Deheng Ye"
+        url: ""
+      - name: "Qiang Fu"
+        url: ""
+      - name: "Yang Guang"
+        url: ""
+      - name: "Wei Yang"
+        url: ""
+      - name: "Lanxiao Huang"
+        url: ""
+      - name: "Xiangyang Ji"
+        url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
+    venue: "NeurIPS D&B Track"
+    year: 2023
+    highlight: true  # 是否高亮显示
+    oral: false       # 是否口头报告
+    award: ""  # 可选的奖项
+    links:
+      paper: "https://arxiv.org/abs/2408.10556"
+      project: "https://sites.google.com/view/hok-offline"
+      code: "https://github.com/tencent-ailab/hokoff"
+    image: "qyimages/hokoff.png"  # 静态图片
+    description: "We propose Hokoff, a comprehensive set of pre-collected datasets that covers both offline RL and offline MARL, accompanied by a robust framework, to facilitate further research."
+  - title: "Counterfactual Conservative Q Learning for Offline Multi-Agent Reinforcement Learning"
+    authors:
+      - name: "Jianzhun Shao*"
+        url: "https://scholar.google.com/citations?user=uCLTRH8AAAAJ"
+      - name: "Yun Qu*"
+        is_me: true
+      - name: "Chen Chen"
+        url: ""
+      - name: "Hongchang Zhang"
+        url: ""
+      - name: "Xiangyang Ji"
+        url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
+    venue: "NeurIPS"
+    year: 2023
+    highlight: true  # 是否高亮显示
+    oral: false       # 是否口头报告
+    award: ""  # 可选的奖项
+    links:
+      paper: "https://arxiv.org/abs/2309.12696"
+      code: "https://github.com/thu-rllab/CFCQL"
+    image: "qyimages/CFCQL.png"  # 静态图片
+    description: "We propose a novel multi-agent offline RL algorithm, named CounterFactual Conservative Q-Learning (CFCQL) to conduct conservative value estimation."
+  - title: "Complementary Attention for Multi-Agent Reinforcement Learning"
+    authors:
+      - name: "Jianzhun Shao"
+        url: "https://scholar.google.com/citations?user=uCLTRH8AAAAJ"
+      - name: "Hongchang Zhang"
+        url: ""
+      - name: "Yun Qu"
+        is_me: true
+      - name: "Chang Liu"
+        url: ""
+      - name: "Shuncheng He"
+        url: ""
+      - name: "Yuhang Jiang"
+        url: "https://scholar.google.com/citations?user=hBuJU48AAAAJ"
+      - name: "Xiangyang Ji"
+        url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
+    venue: "ICML"
+    year: 2023
+    highlight: false  # 是否高亮显示
+    oral: false       # 是否口头报告
+    award: ""  # 可选的奖项
+    links:
+      paper: "https://proceedings.mlr.press/v202/shao23b/shao23b.pdf"
+      code: "https://github.com/thu-rllab/CAMA"
+    image: "qyimages/CAMA.png"  # 静态图片
+    description: "In this paper, we propose Complementary Attention for Multi-Agent reinforcement learning (CAMA), which applies a divide-and-conquer strategy on input entities accompanied with the complementary attention of enhancement and replenishment."
+
