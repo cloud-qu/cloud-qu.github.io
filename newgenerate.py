@@ -76,19 +76,22 @@ def generate_news_html(news_items):
     return news_html
 
 def generate_publication_html(pub, index):
-    """生成单篇论文的HTML - 简约大气版"""
+    """生成单篇论文的HTML - 带灯箱效果"""
     bgcolor = ' bgcolor="#ffffd0"' if pub.get('highlight') else ''
     
     authors_html = generate_author_html(pub['authors'])
     links_html = generate_links_html(pub.get('links', {}))
     venue_html = generate_venue_html(pub)
     
-    # 简约设计 - 干净的分割线和间距
+    # 简约设计 - 添加点击放大灯箱效果
     html = f'''
     <tr{bgcolor}>
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div style="border-radius:4px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.12);">
-          <img src='{pub['image']}' width="160" style="width:100%;display:block;">
+          <img src='{pub['image']}' width="160" style="width:100%;display:block;cursor:pointer;transition:transform 0.2s;" 
+               onmouseover="this.style.transform='scale(1.05)'" 
+               onmouseout="this.style.transform='scale(1)'"
+               onclick="openLightbox('{pub['image']}')">
         </div>
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
@@ -152,6 +155,37 @@ def generate_miscellaneous_html(misc_items):
 '''
     return misc_html
 
+def generate_lightbox_html():
+    """生成灯箱HTML和JavaScript"""
+    return '''
+    <!-- Lightbox Modal -->
+    <div id="lightbox" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.9);cursor:pointer;" onclick="closeLightbox()">
+      <span style="position:absolute;top:20px;right:40px;color:#f1f1f1;font-size:40px;font-weight:bold;cursor:pointer;" onclick="closeLightbox()">&times;</span>
+      <img id="lightbox-img" style="margin:auto;display:block;max-width:90%;max-height:90%;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);box-shadow:0 4px 20px rgba(0,0,0,0.5);">
+    </div>
+    
+    <script>
+    function openLightbox(imgSrc) {
+      event.stopPropagation();
+      document.getElementById('lightbox').style.display = 'block';
+      document.getElementById('lightbox-img').src = imgSrc;
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    
+    // 按ESC键关闭
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+    </script>
+'''
+
 def generate_html(config):
     """生成完整的HTML文件 - 简约大气版"""
     profile = config['profile']
@@ -197,7 +231,7 @@ def generate_html(config):
                 </p>
               </td>
               <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="{profile['photo']}"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;box-shadow:0 2px 8px rgba(0,0,0,0.15);" alt="profile photo" src="{profile['photo']}" class="hoverZoomLink"></a>
+                <img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;box-shadow:0 2px 8px rgba(0,0,0,0.15);" alt="profile photo" src="{profile['photo']}">
               </td>
             </tr>
           </tbody></table>
@@ -233,6 +267,9 @@ def generate_html(config):
     # 添加Miscellaneous模块
     misc_html = generate_miscellaneous_html(miscellaneous)
     
+    # 添加灯箱
+    lightbox_html = generate_lightbox_html()
+    
     # 底部 - 使用原网站的格式
     footer = '''          
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -248,11 +285,11 @@ def generate_html(config):
         </td>
       </tr>
     </table>
-  </body>
-</html>
 '''
     
-    return header + news_html + research_header + publications_html + publications_footer + misc_html + footer
+    return header + news_html + research_header + publications_html + publications_footer + misc_html + lightbox_html + footer + '''
+  </body>
+</html>'''
 
 def main():
     config = load_config('publications.yaml')
