@@ -1,6 +1,6 @@
 profile:
-  name: "Yun Qu"
-  title: "Ph.D. candidate"
+  name: "Yun Qu | 曲云"
+  title: "fourth-year Ph.D. student"
   institution: "Tsinghua University"
   department: "Department of Automation"
   advisor: "Prof. Xiangyang Ji"
@@ -14,7 +14,20 @@ profile:
   bio: |
     My research focuses on <strong>Reinforcement Learning</strong> and <strong>Large Language Models</strong>.
     I work with the <a href="https://www.thuidm.com/">THU-IDM</a> team, where we develop efficient algorithms for decision-making.
-    Prior to my doctoral studies, I received my B.Eng. degree from the Department of Automation at Tsinghua University.
+    Prior to my doctoral studies, I received my B.E. degree from the Department of Automation at Tsinghua University.
+
+news:
+  - date: "2025-09"
+    content: "One paper accepted to <strong>NeurIPS 2025</strong>!"
+  - date: "2025-05"
+    content: "<a href='https://arxiv.org/abs/2504.19139'>PDTS</a> was accepted to <strong>ICML 2025</strong>!"
+  - date: "2024-12"
+    content: "<a href='https://arxiv.org/abs/2412.11120'>LaRe</a> was accepted to <strong>AAAI 2025</strong>."
+  - date: "2024-09"
+    content: "Two papers accepted to <strong>NeurIPS 2024</strong>!"
+  - date: "2022-09"
+    content: "Started my Ph.D. journey at Tsinghua University."
+
 
 research:
   interests: "I'm interested in <strong>Reinforcement Learning</strong> and <strong>Large Language Models</strong>. My research focuses on efficient and intelligent decision-making with minimal environment interactions."
@@ -337,3 +350,17 @@ publications:
     image: "qyimages/CAMA.png"  # 静态图片
     description: "In this paper, we propose Complementary Attention for Multi-Agent reinforcement learning (CAMA), which applies a divide-and-conquer strategy on input entities accompanied with the complementary attention of enhancement and replenishment."
 
+
+# Miscellaneous 模块 - 放在Publications之后
+miscellaneous:
+  - title: "Academic Service"
+    items:
+      - "Reviewer for NeurIPS, ICML, ICLR, AAAI"
+  
+  - title: "Awards & Honors"
+    items:
+      - "Outstanding Graduate Award, Beijing, 2022"
+      - "Outstanding Graduate Award, Tsinghua University, 2022"
+  
+  - title: "Collaborations"
+    content: "I'm fortunate to collaborate with researchers from <a href='https://www.thuidm.com/'>THU-IDM</a> and other institutions."
