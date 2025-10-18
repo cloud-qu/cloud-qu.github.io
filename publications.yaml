@@ -75,6 +75,7 @@ publications:
     oral: false       # 是否口头报告
     award: ""  # 可选的奖项
     links:
+      project: "https://thu-rllab.github.io/PDTS_project_page/"
       paper: "https://arxiv.org/abs/2504.19139"
       code: "https://github.com/thu-rllab/PDTS"
     image: "qyimages/PDTS.png"  # 静态图片
