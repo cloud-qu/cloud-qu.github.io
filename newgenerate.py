@@ -10,7 +10,7 @@ def generate_author_html(authors):
     author_links = []
     for author in authors:
         if author.get('is_me'):
-            author_links.append(f"<strong>{author['name']}</strong>")
+            author_links.append(f"<strong style='color:#000;'>{author['name']}</strong>")
         elif 'url' in author and author['url']:
             author_links.append(f"<a href=\"{author['url']}\">{author['name']}</a>")
         else:
@@ -109,7 +109,7 @@ def generate_publication_html(pub, index):
         {links_html}
         </span>
         <p></p>
-        <p style="color:#666;font-size:14px;line-height:1.6;">
+        <p style="color:#666;font-size:14px;line-height:1.2;">
         {pub['description']}
         </p>
       </td>
