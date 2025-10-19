@@ -49,7 +49,7 @@ publications:
         url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
     venue: "arxiv"
     year: 2025
-    highlight: true  # 是否高亮显示
+    highlight: false  # 是否高亮显示
     oral: false       # 是否口头报告
     award: ""  # 可选的奖项
     links:
@@ -71,7 +71,7 @@ publications:
         url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
     venue: "ICML"
     year: 2025
-    highlight: true  # 是否高亮显示
+    highlight: false  # 是否高亮显示
     oral: false       # 是否口头报告
     award: ""  # 可选的奖项
     links:
@@ -98,7 +98,7 @@ publications:
         url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
     venue: "arxiv"
     year: 2025
-    highlight: true  # 是否高亮显示
+    highlight: false  # 是否高亮显示
     oral: false       # 是否口头报告
     award: ""  # 可选的奖项
     links:
@@ -124,7 +124,7 @@ publications:
         url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
     venue: "AAAI"
     year: 2025
-    highlight: true  # 是否高亮显示
+    highlight: false  # 是否高亮显示
     oral: false       # 是否口头报告
     award: ""  # 可选的奖项
     links:
@@ -245,7 +245,7 @@ publications:
         url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
     venue: "ICML"
     year: 2024
-    highlight: true  # 是否高亮显示
+    highlight: false  # 是否高亮显示
     oral: false       # 是否口头报告
     award: ""  # 可选的奖项
     links:
@@ -293,7 +293,7 @@ publications:
         url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
     venue: "NeurIPS D&B Track"
     year: 2023
-    highlight: true  # 是否高亮显示
+    highlight: false  # 是否高亮显示
     oral: false       # 是否口头报告
     award: ""  # 可选的奖项
     links:
@@ -316,7 +316,7 @@ publications:
         url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
     venue: "NeurIPS"
     year: 2023
-    highlight: true  # 是否高亮显示
+    highlight: false  # 是否高亮显示
     oral: false       # 是否口头报告
     award: ""  # 可选的奖项
     links:
