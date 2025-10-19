@@ -246,7 +246,7 @@ def generate_html(config):
               <td style="padding:20px;width:100%;vertical-align:middle">
                 <h2 style="border-bottom:2px solid #e0e0e0;padding-bottom:10px;">Research</h2>
                 <p style="line-height:1.7;color:#555;margin-top:15px;">
-                  {research['interests']} Representative works are <span class="highlight">highlighted</span>.
+                  {research['interests']}</span>
                 </p>
               </td>
             </tr>
