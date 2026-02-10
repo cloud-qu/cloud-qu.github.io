@@ -1,5 +1,6 @@
 import yaml
 from pathlib import Path
+from collections import defaultdict
 
 def load_config(yaml_file):
     with open(yaml_file, 'r', encoding='utf-8') as f:
@@ -74,7 +75,6 @@ def generate_news_html(news_items):
           </tbody></table>
 '''
     return news_html
-
 def generate_publication_html(pub, index):
     """生成单篇论文的HTML - 带灯箱效果"""
     bgcolor = ' bgcolor="#ffffd0"' if pub.get('highlight') else ''
@@ -83,19 +83,37 @@ def generate_publication_html(pub, index):
     links_html = generate_links_html(pub.get('links', {}))
     venue_html = generate_venue_html(pub)
     
-    # 简约设计 - 添加点击放大灯箱效果
+    # 处理图片：无图时显示占位符
+    image = pub.get('image', '')
+    if image:
+        img_html = f'''<div style="border-radius:4px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.12);">
+          <img src='{image}' width="160" style="width:100%;display:block;cursor:pointer;transition:transform 0.2s;" 
+               onmouseover="this.style.transform='scale(1.05)'" 
+               onmouseout="this.style.transform='scale(1)'"
+               onclick="openLightbox('{image}')">
+        </div>'''
+    else:
+        img_html = '''<div style="border-radius:4px;overflow:hidden;width:160px;height:100px;background:#f0f0f0;display:flex;align-items:center;justify-content:center;">
+          <span style="color:#ccc;font-size:28px;">📄</span>
+        </div>'''
+    
+    # 处理论文标题链接
+    links = pub.get('links', {})
+    title_url = links.get('project', '') or links.get('arxiv', '') or links.get('paper', '') or '#'
+    
+    # 处理链接行
+    links_line = f'''<br>
+        <span style="font-size:14px;">
+        {links_html}
+        </span>''' if links_html else ''
+    
     html = f'''
     <tr{bgcolor}>
       <td style="padding:20px;width:25%;vertical-align:middle">
-        <div style="border-radius:4px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.12);">
-          <img src='{pub['image']}' width="160" style="width:100%;display:block;cursor:pointer;transition:transform 0.2s;" 
-               onmouseover="this.style.transform='scale(1.05)'" 
-               onmouseout="this.style.transform='scale(1)'"
-               onclick="openLightbox('{pub['image']}')">
-        </div>
+        {img_html}
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="{pub['links'].get('project', pub['links'].get('arxiv', pub['links'].get('paper', '#')))}">
+        <a href="{title_url}">
           <span class="papertitle">{pub['title']}</span>
         </a>
         <br>
@@ -104,17 +122,52 @@ def generate_publication_html(pub, index):
         </span>
         <br>
         {venue_html}
-        <br>
-        <span style="font-size:14px;">
-        {links_html}
-        </span>
+        {links_line}
         <p></p>
-        <p style="color:#666;font-size:14px;line-height:1.2;">
+        <p style="color:#666;font-size:14px;line-height:1.5;">
         {pub['description']}
         </p>
       </td>
     </tr>
 '''
+    return html
+
+def generate_publications_by_year(publications):
+    """按年份分组生成论文HTML，支持折叠展开"""
+    # 按年份分组
+    pubs_by_year = defaultdict(list)
+    for pub in publications:
+        pubs_by_year[pub['year']].append(pub)
+    
+    # 按年份降序排列
+    sorted_years = sorted(pubs_by_year.keys(), reverse=True)
+    
+    html = ''
+    for year in sorted_years:
+        year_pubs = pubs_by_year[year]
+        count = len(year_pubs)
+        
+        html += f'''
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:10px 20px;width:100%;vertical-align:middle;">
+                <div onclick="toggleYear('{year}')" style="cursor:pointer;display:flex;align-items:center;user-select:none;">
+                  <span id="arrow-{year}" style="display:inline-block;transition:transform 0.3s;transform:rotate(90deg);margin-right:10px;font-size:14px;color:#999;">&#9654;</span>
+                  <h3 style="margin:0;color:#333;font-weight:600;font-size:18px;">{year}</h3>
+                  <span style="margin-left:10px;color:#999;font-size:14px;">({count} paper{"s" if count > 1 else ""})</span>
+                </div>
+              </td>
+            </tr>
+          </tbody></table>
+          <table id="year-{year}" style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+'''
+        for i, pub in enumerate(year_pubs):
+            html += generate_publication_html(pub, i)
+        
+        html += '''
+          </tbody></table>
+'''
+    
     return html
 
 def generate_miscellaneous_html(misc_items):
@@ -155,6 +208,49 @@ def generate_miscellaneous_html(misc_items):
 '''
     return misc_html
 
+# def generate_lightbox_html():
+#     """生成灯箱HTML和JavaScript"""
+#     return '''
+#     <!-- Lightbox Modal -->
+#     <div id="lightbox" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.9);cursor:pointer;" onclick="closeLightbox()">
+#       <span style="position:absolute;top:20px;right:40px;color:#f1f1f1;font-size:40px;font-weight:bold;cursor:pointer;" onclick="closeLightbox()">&times;</span>
+#       <img id="lightbox-img" style="margin:auto;display:block;max-width:90%;max-height:90%;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);box-shadow:0 4px 20px rgba(0,0,0,0.5);">
+#     </div>
+    
+#     <script>
+#     function openLightbox(imgSrc) {
+#       event.stopPropagation();
+#       document.getElementById('lightbox').style.display = 'block';
+#       document.getElementById('lightbox-img').src = imgSrc;
+#       document.body.style.overflow = 'hidden';
+#     }
+    
+#     function closeLightbox() {
+#       document.getElementById('lightbox').style.display = 'none';
+#       document.body.style.overflow = 'auto';
+#     }
+    
+#     function toggleYear(year) {
+#       var content = document.getElementById('year-' + year);
+#       var arrow = document.getElementById('arrow-' + year);
+#       if (content.style.display === 'none') {
+#         content.style.display = '';
+#         arrow.style.transform = 'rotate(90deg)';
+#       } else {
+#         content.style.display = 'none';
+#         arrow.style.transform = 'rotate(0deg)';
+#       }
+#     }
+    
+#     // 按ESC键关闭灯箱
+#     document.addEventListener('keydown', function(e) {
+#       if (e.key === 'Escape') {
+#         closeLightbox();
+#       }
+#     });
+#     </script>
+# '''
+
 def generate_lightbox_html():
     """生成灯箱HTML和JavaScript"""
     return '''
@@ -163,6 +259,12 @@ def generate_lightbox_html():
       <span style="position:absolute;top:20px;right:40px;color:#f1f1f1;font-size:40px;font-weight:bold;cursor:pointer;" onclick="closeLightbox()">&times;</span>
       <img id="lightbox-img" style="margin:auto;display:block;max-width:90%;max-height:90%;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);box-shadow:0 4px 20px rgba(0,0,0,0.5);">
     </div>
+    
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:\'smooth\'})" 
+            style="display:none;position:fixed;bottom:30px;right:30px;z-index:999;border:none;outline:none;background-color:#2c5aa0;color:white;cursor:pointer;padding:12px 16px;border-radius:50%;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,0.2);transition:opacity 0.3s,transform 0.3s;"
+            onmouseover="this.style.transform=\'scale(1.1)\'" 
+            onmouseout="this.style.transform=\'scale(1)\'">↑</button>
     
     <script>
     function openLightbox(imgSrc) {
@@ -177,12 +279,34 @@ def generate_lightbox_html():
       document.body.style.overflow = 'auto';
     }
     
-    // 按ESC键关闭
+    function toggleYear(year) {
+      var content = document.getElementById('year-' + year);
+      var arrow = document.getElementById('arrow-' + year);
+      if (content.style.display === 'none') {
+        content.style.display = '';
+        arrow.style.transform = 'rotate(90deg)';
+      } else {
+        content.style.display = 'none';
+        arrow.style.transform = 'rotate(0deg)';
+      }
+    }
+    
+    // 按ESC键关闭灯箱
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
         closeLightbox();
       }
     });
+    
+    // 返回顶部按钮显示/隐藏
+    window.onscroll = function() {
+      var btn = document.getElementById('back-to-top');
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btn.style.display = 'block';
+      } else {
+        btn.style.display = 'none';
+      }
+    };
     </script>
 '''
 
@@ -236,33 +360,40 @@ def generate_html(config):
             </tr>
           </tbody></table>
 '''
+
     
     # 添加News模块
     news_html = generate_news_html(news)
-    
-    # Research部分
+    total_pubs = len(publications)
     research_header = f'''          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2 style="border-bottom:2px solid #e0e0e0;padding-bottom:10px;">Research</h2>
+                <h2 style="border-bottom:2px solid #e0e0e0;padding-bottom:10px;">Research 
+                  <span style="font-size:14px;color:#999;font-weight:normal;margin-left:8px;">({total_pubs} publications)</span>
+                </h2>
                 <p style="line-height:1.7;color:#555;margin-top:15px;">
-                  {research['interests']}</span>
+                  {research['interests']}
                 </p>
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
 '''
     
-    # 生成所有论文
-    publications_html = ''
-    for i, pub in enumerate(publications):
-        publications_html += generate_publication_html(pub, i)
+#     # Research部分
+#     research_header = f'''          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+#               <tr>
+#               <td style="padding:20px;width:100%;vertical-align:middle">
+#                 <h2 style="border-bottom:2px solid #e0e0e0;padding-bottom:10px;">Research</h2>
+#                 <p style="line-height:1.7;color:#555;margin-top:15px;">
+#                   {research['interests']}
+#                 </p>
+#               </td>
+#             </tr>
+#           </tbody></table>
+# '''
     
-    publications_footer = '''
-          </tbody></table>
-'''
+    # 按年份分组生成论文
+    publications_html = generate_publications_by_year(publications)
     
     # 添加Miscellaneous模块
     misc_html = generate_miscellaneous_html(miscellaneous)
@@ -287,7 +418,7 @@ def generate_html(config):
     </table>
 '''
     
-    return header + news_html + research_header + publications_html + publications_footer + misc_html + lightbox_html + footer + '''
+    return header + news_html + research_header + publications_html + misc_html + lightbox_html + footer + '''
   </body>
 </html>'''
 

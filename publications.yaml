@@ -35,6 +35,41 @@ research:
   interests: "I'm interested in <strong>Reinforcement Learning</strong> and <strong>Large Language Models</strong>. My research focuses on efficient and intelligent decision-making with minimal environment interactions."
 
 publications:
+  - title: "Small Generalizable Prompt Predictive Models Can Steer Efficient RL Post-Training of Large Reasoning Models"
+    authors:
+      - name: "Yun Qu"
+        is_me: true
+      - name: "Qi (Cheems) Wang"
+        url: "https://sites.google.com/view/albert-q-wang-at-ai-community/home"
+      - name: "Yixiu Mao"
+        url: "https://scholar.google.com/citations?user=gNcb5LUAAAAJ"
+      - name: "Heming Zou"
+        url: ""
+      - name: "Yuhang Jiang"
+        url: ""
+      - name: "Weijie Liu"
+        url: ""
+      - name: "Clive Bai"
+        url: ""
+      - name: "Kai Yang"
+        url: ""
+      - name: "Yangkun Chen"
+        url: ""
+      - name: "Saiyong Yang"
+        url: ""
+      - name: "Xiangyang Ji"
+        url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
+    venue: "arxiv"
+    year: 2026
+    highlight: false  # 是否高亮显示
+    oral: false       # 是否口头报告
+    award: ""  # 可选的奖项
+    links:
+      paper: "https://arxiv.org/pdf/2602.01970"
+    image: "qyimages/GPS.png"  # 静态图片
+    description: "This study introduces Generalizable Predictive Prompt Selection (GPS), which performs Bayesian inference towards prompt difficulty using a lightweight generative model trained on the shared optimization history."
+    
+    
   - title: "Can Prompt Difficulty be Online Predicted for Accelerating RL Finetuning of Reasoning Models?"
     authors:
       - name: "Yun Qu"
@@ -59,6 +94,105 @@ publications:
       code: "https://github.com/thu-rllab/MoPPS"
     image: "qyimages/mopps.png"  # 静态图片
     description: "This work introduces Model Predictive Prompt Selection, a Bayesian risk-predictive framework that online estimates prompt difficulty without requiring costly LLM interactions."
+
+  - title: "Utility-Diversity Aware Online Batch Selection for LLM Supervised Fine-tuning"
+    authors:
+      - name: "Heming Zou"
+        url: ""
+      - name: "Yixiu Mao"
+        url: "https://scholar.google.com/citations?user=gNcb5LUAAAAJ"
+      - name: "Yun Qu"
+        is_me: true
+      - name: "Qi (Cheems) Wang"
+        url: "https://sites.google.com/view/albert-q-wang-at-ai-community/home"
+      - name: "Xiangyang Ji"
+        url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
+    venue: "arXiv"
+    year: 2025
+    highlight: false
+    oral: false
+    award: ""
+    links:
+      paper: ""
+      code: "https://github.com/gfyddha/UDS"
+    image: "qyimages/UDS.png"
+    description: "We develop UDS (Utility-Diversity Sampling), a framework for efficient online batch selection in LLM supervised fine-tuning that leverages the nuclear norm of the logits matrix to capture both data utility and intra-sample diversity, eliminating the need for external resources."
+
+  - title: "VAO: Validation-Aligned Optimization for Cross-Task Generative Auto-Bidding"
+    authors:
+      - name: "Yiqin Lv*"
+        url: ""
+      - name: "Zhiyu Mou*"
+        url: ""
+      - name: "Miao Xu"
+        url: ""
+      - name: "Jinghao Chen"
+        url: ""
+      - name: "Qi (Cheems) Wang"
+        url: "https://sites.google.com/view/albert-q-wang-at-ai-community/home"
+      - name: "Yixiu Mao"
+        url: "https://scholar.google.com/citations?user=gNcb5LUAAAAJ"
+      - name: "Yun Qu"
+        is_me: true
+      - name: "Rongquan Bai"
+        url: ""
+      - name: "Chuan Yu"
+        url: ""
+      - name: "Jian Xu"
+        url: ""
+      - name: "Bo Zheng"
+        url: ""
+      - name: "Xiangyang Ji"
+        url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
+    venue: "arXiv"
+    year: 2025
+    highlight: false
+    oral: false
+    award: ""
+    links:
+      paper: "https://arxiv.org/abs/2510.07760"
+    image: "qyimages/VAO.png"
+    description: "We present  Validation-Aligned Optimization (VAO), a principled data-sharing method that adaptively reweights cross-task data contributions based on validation performance feedback."
+
+  - title: "Lessons and Winning Solutions in Industrial Object Detection and Pose Estimation from the 2025 Bin-Picking Perception Challenge"
+    authors:
+      - name: "Ziqin Huang*"
+        url: ""
+      - name: "Chengxi Li*"
+        url: ""
+      - name: "Yingyue Li*"
+        url: ""
+      - name: "Xingyu Liu*"
+        url: ""
+      - name: "Chenyangguang Zhang"
+        url: ""
+      - name: "Ruida Zhang"
+        url: ""
+      - name: "Bowen Fu"
+        url: ""
+      - name: "Xinggang Hu"
+        url: ""
+      - name: "Yun Qu"
+        is_me: true
+      - name: "Mengge Liu"
+        url: ""
+      - name: "Yixiu Mao"
+        url: "https://scholar.google.com/citations?user=gNcb5LUAAAAJ"
+      - name: "Wendong Huang"
+        url: ""
+      - name: "Gu Wang"
+        url: ""
+      - name: "Xiangyang Ji"
+        url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
+    venue: "ICCV Workshop"
+    year: 2025
+    highlight: false
+    oral: false
+    award: ""
+    links:
+      paper: "https://openaccess.thecvf.com/content/ICCV2025W/R6D/papers/Huang_Lessons_and_Winning_Solutions_in_Industrial_Object_Detection_and_Pose_ICCVW_2025_paper.pdf"
+    image: "qyimages/pose.png"
+    description: "This paper analyzes challenges in object pose estimation within industrial environments, based on our winning solutions in the 2025 Perception Challenge for Bin-Picking. We highlight two unexpected observations: methods trained on object-specific datasets performed worse than those on unseen data, and evaluation results varied significantly depending on the chosen metrics."
   - title: "Adaptive Neighborhood-Constrained Q Learning for Offline Reinforcement Learning"
     authors:
       - name: "Yixiu Mao"
@@ -379,7 +513,7 @@ publications:
 miscellaneous:
   - title: "Academic Service"
     items:
-      - "Reviewer for NeurIPS, ICML, ICLR, AAAI"
+      - "Reviewer for NeurIPS, ICML, ICLR, AAAI, AAMAS"
       - "Reviewer for Expert Systems With Applications"
   
   - title: "Awards & Honors"
