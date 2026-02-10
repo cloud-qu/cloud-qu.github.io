@@ -86,14 +86,14 @@ def generate_publication_html(pub, index):
     # 处理图片：无图时显示占位符
     image = pub.get('image', '')
     if image:
-        img_html = f'''<div style="border-radius:4px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.12);">
-          <img src='{image}' width="160" style="width:100%;display:block;cursor:pointer;transition:transform 0.2s;" 
+        img_html = f'''<div style="border-radius:4px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.12);width:100%;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;background:#fafafa;">
+          <img src='{image}' style="max-width:100%;max-height:100%;object-fit:contain;display:block;cursor:pointer;transition:transform 0.2s;" 
                onmouseover="this.style.transform='scale(1.05)'" 
                onmouseout="this.style.transform='scale(1)'"
                onclick="openLightbox('{image}')">
         </div>'''
     else:
-        img_html = '''<div style="border-radius:4px;overflow:hidden;width:160px;height:100px;background:#f0f0f0;display:flex;align-items:center;justify-content:center;">
+        img_html = '''<div style="border-radius:4px;overflow:hidden;width:100%;aspect-ratio:4/3;background:#f0f0f0;display:flex;align-items:center;justify-content:center;">
           <span style="color:#ccc;font-size:28px;">📄</span>
         </div>'''
     
@@ -109,7 +109,7 @@ def generate_publication_html(pub, index):
     
     html = f'''
     <tr{bgcolor}>
-      <td style="padding:20px;width:25%;vertical-align:middle">
+      <td style="padding:20px;width:25%;vertical-align:middle;min-width:120px;">
         {img_html}
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
