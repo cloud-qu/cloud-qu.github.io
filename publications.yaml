@@ -95,6 +95,32 @@ publications:
     image: "qyimages/mopps.png"  # 静态图片
     description: "This work introduces Model Predictive Prompt Selection, a Bayesian risk-predictive framework that online estimates prompt difficulty without requiring costly LLM interactions."
 
+  - title: "HINT: Hierarchical Interaction Modeling for Autoregressive Multi-Human Motion Generation"
+    authors:
+      - name: "Mengge Liu"
+        url: ""
+      - name: "Yan Di"
+        url: ""
+      - name: "Gu Wang"
+        url: ""
+      - name: "Yun Qu"
+        is_me: true
+      - name: "Dekai Zhu"
+        url: ""
+      - name: "Yanyan Li"
+        url: ""
+      - name: "Xiangyang Ji"
+        url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
+    venue: "arXiv"
+    year: 2026
+    highlight: false
+    oral: false
+    award: ""
+    links:
+      paper: "https://arxiv.org/pdf/2601.20383"
+    image: "qyimages/hint.png"
+    description: "We introduce HINT, the first autoregressive framework for multi-human motion generation with hierarchical interaction modeling in diffusion. HINT leverages disentangled motion representation and a sliding-window strategy, achieving an FID of 3.100 on InterHuman, significantly improving over the previous state-of-the-art."
+
   - title: "Utility-Diversity Aware Online Batch Selection for LLM Supervised Fine-tuning"
     authors:
       - name: "Heming Zou"
@@ -507,6 +533,73 @@ publications:
       code: "https://github.com/thu-rllab/CAMA"
     image: "qyimages/CAMA.png"  # 静态图片
     description: "In this paper, we propose Complementary Attention for Multi-Agent reinforcement learning (CAMA), which applies a divide-and-conquer strategy on input entities accompanied with the complementary attention of enhancement and replenishment."
+
+  - title: "HoK3v3: an Environment for Generalization in Heterogeneous Multi-agent Reinforcement Learning"
+    authors:
+      - name: "Lin Liu"
+        url: ""
+      - name: "Jianzhun Shao"
+        url: "https://scholar.google.com/citations?user=uCLTRH8AAAAJ"
+      - name: "Xinkai Chen"
+        url: ""
+      - name: "Yun Qu"
+        is_me: true
+      - name: "Boyuan Wang"
+        url: "https://scholar.google.com/citations?user=BQyuCvwAAAAJ"
+      - name: "Zhenbin Ye"
+        url: ""
+      - name: "Yuexuan Tu"
+        url: ""
+      - name: "Hongyang Qin"
+        url: ""
+      - name: "Yang Jun Feng"
+        url: ""
+      - name: "Lin Lai"
+        url: ""
+      - name: "Yuanqin Wang"
+        url: ""
+      - name: "Meng Meng"
+        url: ""
+      - name: "Wenjun Wang"
+        url: ""
+      - name: "Xiyang Ji"
+        url: ""
+      - name: "Qiang Fu"
+        url: ""
+      - name: "Lanxiao Huang"
+        url: ""
+      - name: "Minwen Deng"
+        url: ""
+      - name: "Yang Wei"
+        url: ""
+      - name: "Houqiang Li"
+        url: ""
+      - name: "Wengang Zhou"
+        url: ""
+      - name: "Ning Xie"
+        url: ""
+      - name: "Xiangyang Ji"
+        url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
+      - name: "Lvfang Tao"
+        url: ""
+      - name: "Lin Yuan"
+        url: ""
+      - name: "Juchao Zhuo"
+        url: ""
+      - name: "Yang Guang"
+        url: ""
+      - name: "Deheng Ye"
+        url: ""
+    venue: ""
+    year: 2023
+    highlight: false
+    oral: false
+    award: ""
+    links:
+      paper: "https://openreview.net/pdf?id=calKOSmBxj"
+      code: "https://github.com/tencent-ailab/hok_env"
+    image: "qyimages/hok.png"
+    description: "We introduce HoK3v3, a 3v3 game environment based on Honor of Kings for multi-agent reinforcement learning research, posing a unique challenge for generalization in heterogeneous MARL with diverse heroes and lineups."
 
 
 # Miscellaneous 模块 - 放在Publications之后
