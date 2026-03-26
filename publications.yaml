@@ -17,6 +17,8 @@ profile:
     Prior to my doctoral studies, I received my B.E. degree from the Department of Automation at Tsinghua University.
 
 news:
+  - date: "2026-01"
+    content: "<a href='https://arxiv.org/pdf/2603.10887'>DPS</a> was accepted to <strong>ICLR 2026</strong>!"
   - date: "2025-11"
     content: "<a href='https://arxiv.org/abs/2507.04632'>MoPPS</a> was accepted to <strong>KDD 2026</strong>!"
   - date: "2025-09"
@@ -94,6 +96,28 @@ publications:
       code: "https://github.com/thu-rllab/MoPPS"
     image: "qyimages/mopps.png"  # 静态图片
     description: "This work introduces Model Predictive Prompt Selection, a Bayesian risk-predictive framework that online estimates prompt difficulty without requiring costly LLM interactions."
+  - title: "Dynamics-Predictive Sampling for Active RL Finetuning of Large Reasoning Models"
+    authors:
+      - name: "Yixiu Mao"
+        url: "https://scholar.google.com/citations?user=gNcb5LUAAAAJ"
+      - name: "Yun Qu"
+        is_me: true
+      - name: "Qi (Cheems) Wang"
+        url: "https://sites.google.com/view/albert-q-wang-at-ai-community/home"
+      - name: "Heming Zou"
+        url: ""
+      - name: "Xiangyang Ji"
+        url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
+    venue: "ICLR"
+    year: 2026
+    highlight: false  # 是否高亮显示
+    oral: false       # 是否口头报告
+    award: ""  # 可选的奖项
+    links:
+      paper: "https://arxiv.org/abs/2603.10887"
+      code: "https://github.com/maoyixiu/DPS"
+    image: "qyimages/dps.png"  # 静态图片
+    description: "This work proposes Dynamics Predictive Sampling (DPS), which online predicts and selects informative prompts by inferring their learning dynamics prior to costly rollouts. "
 
   - title: "HINT: Hierarchical Interaction Modeling for Autoregressive Multi-Human Motion Generation"
     authors:
