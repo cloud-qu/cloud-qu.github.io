@@ -39,6 +39,46 @@ research:
   interests: "I'm interested in <strong>Reinforcement Learning</strong> and <strong>Large Language Models</strong>. My research focuses on efficient and intelligent decision-making with minimal environment interactions."
 
 publications:
+  - title: "Listwise Policy Optimization: Group-based RLVR as Target-Projection on the LLM Response Simplex"
+    authors:
+      - name: "Yun Qu"
+        is_me: true
+      - name: "Qi (Cheems) Wang"
+        url: "https://sites.google.com/view/albert-q-wang-at-ai-community/home"
+      - name: "Yixiu Mao"
+        url: "https://scholar.google.com/citations?user=gNcb5LUAAAAJ"
+      - name: "Heming Zou"
+        url: ""
+      - name: "Yuhang Jiang"
+        url: ""
+      - name: "Yingyue Li"
+        url: ""
+      - name: "Wutong Xu"
+        url: ""
+      - name: "Lizhou Cai"
+        url: ""
+      - name: "Weijie Liu"
+        url: ""
+      - name: "Clive Bai"
+        url: ""
+      - name: "Kai Yang"
+        url: ""
+      - name: "Yangkun Chen"
+        url: ""
+      - name: "Saiyong Yang"
+        url: ""
+      - name: "Xiangyang Ji"
+        url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
+    venue: "arxiv"
+    year: 2026
+    highlight: false  # 是否高亮显示
+    oral: false       # 是否口头报告
+    award: ""  # 可选的奖项
+    links:
+      paper: "https://arxiv.org/pdf/2605.06139"
+    image: "qyimages/LPO.png"  # 静态图片
+    description: "This work reveals that group-based RLVR methods share a common geometric structure: each implicitly defines a target distribution on the response simplex and projects toward it via first-order approximation. Building on this insight, we propose Listwise Policy Optimization (LPO) to explicitly conduct the target-projection, which demystifies the implicit target by restricting the proximal RL objective to the response simplex, and then projects the policy via exact divergence minimization."
+    
   - title: "Small Generalizable Prompt Predictive Models Can Steer Efficient RL Post-Training of Large Reasoning Models"
     authors:
       - name: "Yun Qu"
