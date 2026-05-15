@@ -110,6 +110,7 @@ publications:
     award: ""  # 可选的奖项
     links:
       paper: "https://arxiv.org/pdf/2602.01970"
+      code: "https://github.com/thu-rllab/GPS"
     image: "qyimages/GPS.png"  # 静态图片
     description: "This study introduces Generalizable Predictive Prompt Selection (GPS), which performs Bayesian inference towards prompt difficulty using a lightweight generative model trained on the shared optimization history."
     
@@ -677,8 +678,19 @@ miscellaneous:
   
   - title: "Awards & Honors"
     items:
-      - "Outstanding Graduate Award, Beijing, 2022"
-      - "Outstanding Graduate Award, Tsinghua University, 2022"
+      - "First-class Comprehensive Scholarship for Graduate Students, Tsinghua University, 2024&2025 （清华大学研究生一等综合奖学金）"
+      - "Outstanding Graduate Award, Beijing, 2022 （北京市优秀毕业生）"
+      - "Outstanding Graduate Award, Tsinghua University, 2022 （清华大学优秀毕业生）"
   
   - title: "Collaborations"
     content: "I'm fortunate to collaborate with researchers from <a href='https://www.thuidm.com/'>THU-IDM</a> and other institutions."
+
+
+
+internships:
+  - role: "Qingyun Intern （青云实习生）"
+    company: "Tencent, Hunyuan Large Language Model Department"
+    duration: "2025.11-2026.05"
+  - role: "Research Intern"
+    company: "Tencent, TiMi Studio"
+    duration: "2023.02-2023.06"

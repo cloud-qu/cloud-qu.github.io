@@ -132,6 +132,31 @@ def generate_publication_html(pub, index):
 '''
     return html
 
+def generate_internships_html(internships):
+    """生成实习经历模块HTML"""
+    if not internships:
+        return ""
+    
+    html = '''          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2 style="border-bottom:2px solid #e0e0e0;padding-bottom:10px;">Internships</h2>
+                <ul style="margin:15px 0 0 0;padding-left:20px;line-height:1.8;">
+'''
+    
+    for item in internships:
+        role = item.get('role', '')
+        company = item.get('company', '')
+        duration = item.get('duration', '')
+        # 如果有进一步的信息也可以继续添加
+        html += f"                  <li style='margin-bottom:10px;'><strong style='color:#2c5aa0;'>{role}</strong> @ {company} <span style='color:#888;font-size:14px;margin-left:8px;font-style:italic;'>({duration})</span></li>\n"
+    
+    html += '''                </ul>
+              </td>
+            </tr>
+          </tbody></table>
+'''
+    return html
 def generate_publications_by_year(publications):
     """按年份分组生成论文HTML，支持折叠展开"""
     # 按年份分组
@@ -316,6 +341,7 @@ def generate_html(config):
     news = config.get('news', [])
     research = config['research']
     publications = config['publications']
+    internships = config.get('internships', [])  # 新增提取 internships
     miscellaneous = config.get('miscellaneous', [])
     
     # 使用原网站的完整头部
@@ -395,6 +421,9 @@ def generate_html(config):
     # 按年份分组生成论文
     publications_html = generate_publications_by_year(publications)
     
+    # 添加实习配置模块
+    internships_html = generate_internships_html(internships)
+
     # 添加Miscellaneous模块
     misc_html = generate_miscellaneous_html(miscellaneous)
     
@@ -418,7 +447,8 @@ def generate_html(config):
     </table>
 '''
     
-    return header + news_html + research_header + publications_html + misc_html + lightbox_html + footer + '''
+    # 将 internships_html 加入到输出拼接中
+    return header + news_html + research_header + publications_html + internships_html + misc_html + lightbox_html + footer + '''
   </body>
 </html>'''
 
