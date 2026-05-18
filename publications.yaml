@@ -346,7 +346,7 @@ publications:
         url: ""
       - name: "Xiangyang Ji"
         url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
-    venue: "arxiv"
+    venue: "Nature Communications (AIP)"
     year: 2025
     highlight: false  # 是否高亮显示
     oral: false       # 是否口头报告
@@ -444,7 +444,7 @@ publications:
         url: ""
       - name: "Xiangyang Ji"
         url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
-    venue: "arxiv"
+    venue: "To appear in Science China Information Sciences (CCF A, IF 7.6)"
     year: 2024
     highlight: false  # 是否高亮显示
     oral: false       # 是否口头报告
@@ -657,7 +657,7 @@ publications:
         url: ""
       - name: "Deheng Ye"
         url: ""
-    venue: ""
+    venue: "arxiv"
     year: 2023
     highlight: false
     oral: false
