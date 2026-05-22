@@ -1,6 +1,6 @@
 profile:
   name: "Yun Qu | 曲云"
-  title: "fourth-year Ph.D. student"
+  title: "fourth-year Ph.D. student (Since 2022)"
   institution: "Tsinghua University"
   department: "Department of Automation"
   advisor: "Prof. Xiangyang Ji"
@@ -14,11 +14,11 @@ profile:
   bio: |
     My research focuses on <strong>Reinforcement Learning</strong> and <strong>Large Language Models</strong>.
     I work with the <a href="https://www.thuidm.com/">THU-IDM</a> team, where we develop efficient algorithms for decision-making.
-    Prior to my doctoral studies, I received my B.E. degree from the Department of Automation at Tsinghua University.
+    Prior to my doctoral studies, I received my B.E. degree from the Department of Automation at Tsinghua University in 2022.
 
 news:
   - date: "2026-05"
-    content: "<a href='https://arxiv.org/pdf/2602.01970'>GPS</a> and UDS accepted to <strong>ICML 2026</strong>!"
+    content: "<a href='https://arxiv.org/pdf/2602.01970'>GPS</a> and UDS accepted to <strong>ICML 2026</strong>! <a href='https://arxiv.org/abs/2410.02511'>LEMAE</a> accepted to <strong>Science China Information Sciences</strong>!"
   - date: "2026-01"
     content: "<a href='https://arxiv.org/pdf/2603.10887'>DPS</a> was accepted to <strong>ICLR 2026</strong>!"
   - date: "2025-11"
@@ -277,11 +277,11 @@ publications:
         url: ""
       - name: "Xiangyang Ji"
         url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
-    venue: "ICCV Workshop"
+    venue: "ICCV R6D Workshop"
     year: 2025
     highlight: false
     oral: false
-    award: ""
+    award: "Grand Prize Winner"
     links:
       paper: "https://openaccess.thecvf.com/content/ICCV2025W/R6D/papers/Huang_Lessons_and_Winning_Solutions_in_Industrial_Object_Detection_and_Pose_ICCVW_2025_paper.pdf"
     image: "qyimages/pose.png"
@@ -426,7 +426,7 @@ publications:
       code: "https://github.com/maoyixiu/SCAS"
     image: "qyimages/SCAS.png"  # 静态图片
     description: "We propose SCAS, a simple yet effective approach that unifies OOD state correction and OOD action suppression in offline RL."
-  - title: "Choices are More Important than Efforts: LLM Enables Efficient Multi-Agent Exploration"
+  - title: "Stop Wandering, Find the Keys: LLMs Discriminate Key States for Efficient Multi-Agent Exploration"
     authors:
       - name: "Yun Qu"
         is_me: true
@@ -438,14 +438,18 @@ publications:
         url: "https://scholar.google.com/citations?user=uCLTRH8AAAAJ"
       - name: "Yixiu Mao"
         url: "https://scholar.google.com/citations?user=gNcb5LUAAAAJ"
-      - name: "Qi (Cheems) Wang*"
-        url: "https://sites.google.com/view/albert-q-wang-at-ai-community/home"
+      - name: "Heming Zou"
+        url: ""
       - name: "Chang Liu"
+        url: ""
+      - name: "Qi (Cheems) Wang"
+        url: "https://sites.google.com/view/albert-q-wang-at-ai-community/home"
+      - name: "Meiqin Liu"
         url: ""
       - name: "Xiangyang Ji"
         url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
-    venue: "To appear in Science China Information Sciences (CCF A, IF 7.6)"
-    year: 2024
+    venue: "Science China Information Sciences (CCF A, IF 7.6)"
+    year: 2026
     highlight: false  # 是否高亮显示
     oral: false       # 是否口头报告
     award: ""  # 可选的奖项
