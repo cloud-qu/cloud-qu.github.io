@@ -380,13 +380,13 @@ publications:
         url: ""
       - name: "Xiangyang Ji"
         url: "https://www.au.tsinghua.edu.cn/info/1080/3178.htm"
-    venue: "Nature Communications (AIP)"
-    year: 2025
+    venue: "Nature Communications"
+    year: 2026
     highlight: false  # 是否高亮显示
     oral: false       # 是否口头报告
     award: ""  # 可选的奖项
     links:
-      paper: "https://autumn9999.github.io/"
+      paper: "https://www.nature.com/articles/s41467-026-74004-0"
       code: "https://github.com/thu-rllab/MPTS"
     image: "qyimages/MPTS.png"  # 静态图片
     description: "We introduce Model Predictive Task Sampling (MPTS), a framework that bridges the task space and adaptation risk landscape, providing a theoretical foundation for robust active task sampling."
