@@ -133,7 +133,7 @@ def generate_publication_html(pub, index):
     return html
 
 def generate_internships_html(internships):
-    """生成实习经历模块HTML"""
+    """生成实习经历模块HTML，支持 description 列表描述具体工作内容"""
     if not internships:
         return ""
     
@@ -148,8 +148,17 @@ def generate_internships_html(internships):
         role = item.get('role', '')
         company = item.get('company', '')
         duration = item.get('duration', '')
-        # 如果有进一步的信息也可以继续添加
-        html += f"                  <li style='margin-bottom:10px;'><strong style='color:#2c5aa0;'>{role}</strong> @ {company} <span style='color:#888;font-size:14px;margin-left:8px;font-style:italic;'>({duration})</span></li>\n"
+        description = item.get('description', [])
+        html += f"                  <li style='margin-bottom:16px;'><strong style='color:#2c5aa0;'>{role}</strong> @ {company} <span style='color:#888;font-size:14px;margin-left:8px;font-style:italic;'>({duration})</span>"
+        if description:
+            # 兼容单字符串或字符串列表
+            if isinstance(description, str):
+                description = [description]
+            html += "\n                    <ul style='margin:6px 0 0 0;padding-left:20px;color:#555;'>\n"
+            for bullet in description:
+                html += f"                      <li style='margin-bottom:4px;'>{bullet}</li>\n"
+            html += "                    </ul>\n                  "
+        html += "</li>\n"
     
     html += '''                </ul>
               </td>

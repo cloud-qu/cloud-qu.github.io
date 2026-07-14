@@ -728,9 +728,21 @@ miscellaneous:
 
 
 internships:
+  - role: "Seed Intern"
+    company: "ByteDance, Seed-Application-Search Agent"
+    duration: "2026.6-now"
+    description:
+      - "Working on RL post-training for search agents, focusing on PPO critic optimization and contributing to release model development."
+      - "面向 Search Agent 的 Agentic RL 后训练优化，聚焦 PPO Critic 优化，参与最新豆包发版模型开发。"
   - role: "Qingyun Intern （青云实习生）"
     company: "Tencent, Hunyuan Large Language Model Department"
     duration: "2025.11-2026.05"
+    description:
+      - "Conducted research on efficient RL post-training for LLMs, focusing on sampling (<a href='https://arxiv.org/pdf/2602.01970'>GPS</a>) and policy optimization (<a href='https://arxiv.org/pdf/2605.06139'>LPO</a>), resulting in two papers."
+      - "高效 LLM RLVR 后训练算法研究，分别从采样与策略优化切入，产出两篇论文。"
   - role: "Research Intern"
     company: "Tencent, TiMi Studio"
     duration: "2023.02-2023.06"
+    description:
+      - "Developed RL training environments and datasets based on Honor of Kings, resulting in <a href='https://arxiv.org/abs/2408.10556'>Hokoff</a> and <a href='https://openreview.net/pdf?id=calKOSmBxj'>HoK3v3</a>."
+      - 王者荣耀 RL 训练场景与数据集开发，产出两篇论文。"
